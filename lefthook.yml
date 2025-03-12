@@ -1,0 +1,13 @@
+#   Refer for explanation to following link:
+#   https://lefthook.dev/configuration/
+pre-commit:
+  verbose: true
+  jobs:
+    - name: format
+      glob: "**/*.{js,ts}"
+      run: npm run format
+      skip: ["node_modules/*", "dist/*"]
+    - name: lint
+      glob: "**/*.{js,ts}"
+      run: npm run lint
+      skip: ["node_modules/*", "dist/*"]
